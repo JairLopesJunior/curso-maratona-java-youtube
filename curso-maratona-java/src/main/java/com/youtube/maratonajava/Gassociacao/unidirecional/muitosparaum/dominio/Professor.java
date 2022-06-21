@@ -1,10 +1,10 @@
-package com.youtube.maratonajava.Gassociacao.unidirecional.dominio;
+package com.youtube.maratonajava.Gassociacao.unidirecional.muitosparaum.dominio;
 
-public class Time {
+public class Professor {
 
     private String nome;
 
-    public Time(String nome) {
+    public Professor(String nome) {
         this.nome = nome;
     }
 

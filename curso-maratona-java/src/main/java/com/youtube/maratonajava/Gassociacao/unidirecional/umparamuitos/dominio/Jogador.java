@@ -1,4 +1,4 @@
-package com.youtube.maratonajava.Gassociacao.unidirecional.dominio;
+package com.youtube.maratonajava.Gassociacao.unidirecional.umparamuitos.dominio;
 
 public class Jogador {
 

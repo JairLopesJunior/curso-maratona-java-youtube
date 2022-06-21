@@ -9,5 +9,8 @@
         <module name="curso-maratona-java" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="curso-maratona-java" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
