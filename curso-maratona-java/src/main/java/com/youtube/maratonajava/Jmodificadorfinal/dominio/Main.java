@@ -6,5 +6,8 @@ public class Main {
         Carro carro = new Carro();
 
         System.out.println(Carro.VELOCIDADE_LIMITE);
+        System.out.println(carro.COMPRADOR);
+        carro.COMPRADOR.setNome("João");
+        System.out.println(carro.COMPRADOR);
     }
 }
