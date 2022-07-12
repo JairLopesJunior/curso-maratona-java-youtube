@@ -1,4 +1,4 @@
-package Hheranca.dominio;
+package com.youtube.maratonajava.Hheranca.dominio;
 
 public class Funcionario extends Pessoa {
 
