@@ -7,5 +7,11 @@ public class Main {
         FileLoaderImpl fileLoader = new FileLoaderImpl();
         dataLoader.load();
         fileLoader.load();
+
+        dataLoader.remove();
+        fileLoader.remove();
+
+        dataLoader.checkPermission();
+        fileLoader.checkPermission();
     }
 }
