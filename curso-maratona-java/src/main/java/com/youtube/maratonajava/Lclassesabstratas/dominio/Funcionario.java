@@ -15,7 +15,7 @@ public abstract class Funcionario extends Pessoa {
 
     @Override
     public void imprimir() {
-        
+
     }
 
     @Override
