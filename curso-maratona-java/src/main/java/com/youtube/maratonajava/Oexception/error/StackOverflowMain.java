@@ -1,4 +1,4 @@
-package com.youtube.maratonajava.Oexception;
+package com.youtube.maratonajava.Oexception.error;
 
 public class StackOverflowMain {
 
