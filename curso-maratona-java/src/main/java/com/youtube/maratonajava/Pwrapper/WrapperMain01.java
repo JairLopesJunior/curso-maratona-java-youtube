@@ -16,11 +16,16 @@ public class WrapperMain01 {
         // TIPOS WRAPPERS
         Byte byteW = 1;
         Short shortW = 1;
-        Integer intW = 1;
+        Integer intW = 1; // Boxing
         Long longW = 10L;
         Float floatW = 10F;
         Double doubleW = 10D;
         Character charW = 'W';
         Boolean booleanW = false;
+
+        int i = intW; // Unboxing
+        Integer intW2 = Integer.parseInt("1");
+        Integer intW3 = new Integer("4");
+        boolean verdadeiro = Boolean.parseBoolean("True"); // CaseSensitive
     }
 }
