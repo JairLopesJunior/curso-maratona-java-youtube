@@ -3,7 +3,7 @@ package com.youtube.maratonajava.Wnio;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class PathMain03 {
+public class ResolveMain01 {
 
     public static void main(String[] args) {
 
