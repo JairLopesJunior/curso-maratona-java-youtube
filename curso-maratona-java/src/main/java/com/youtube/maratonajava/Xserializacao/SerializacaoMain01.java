@@ -1,6 +1,7 @@
 package com.youtube.maratonajava.Xserializacao;
 
 import com.youtube.maratonajava.Xserializacao.dominio.Aluno;
+import com.youtube.maratonajava.Xserializacao.dominio.Turma;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -14,8 +15,10 @@ public class SerializacaoMain01 {
     public static void main(String[] args) {
 
         Aluno aluno = new Aluno(1L, "Jair Lopes", "123456789");
+        Turma turma = new Turma("Maratona Java Virado no Jiraya em Breve Ricos");
+        aluno.setTurma(turma);
 
-        //serializar(aluno);
+        serializar(aluno);
         deserializar();
     }
 
