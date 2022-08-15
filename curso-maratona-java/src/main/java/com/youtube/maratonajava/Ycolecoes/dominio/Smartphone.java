@@ -1,11 +1,11 @@
 package com.youtube.maratonajava.Ycolecoes.dominio;
 
-public class Smatphone {
+public class Smartphone {
 
     private String serialNumber;
     private String marca;
 
-    public Smatphone(String serialNumber, String marca) {
+    public Smartphone(String serialNumber, String marca) {
         this.serialNumber = serialNumber;
         this.marca = marca;
     }
@@ -21,7 +21,7 @@ public class Smatphone {
         if(obj == null) return false;
         if(this == obj) return true;
         if(this.getClass() != obj.getClass()) return false;
-        Smatphone smatphone = (Smatphone) obj;
+        Smartphone smatphone = (Smartphone) obj;
         return serialNumber != null && serialNumber.equals(smatphone.serialNumber);
     }
 
@@ -33,6 +33,14 @@ public class Smatphone {
     @Override
     public int hashCode() {
         return serialNumber == null ? 0 : this.serialNumber.hashCode();
+    }
+
+    @Override
+    public String toString() {
+        return "Smartphone{" +
+                "serialNumber='" + serialNumber + '\'' +
+                ", marca='" + marca + '\'' +
+                '}';
     }
 
     public String getSerialNumber() {
