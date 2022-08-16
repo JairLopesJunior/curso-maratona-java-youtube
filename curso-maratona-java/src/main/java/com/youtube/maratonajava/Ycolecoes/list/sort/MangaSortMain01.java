@@ -4,7 +4,16 @@ import com.youtube.maratonajava.Ycolecoes.dominio.Manga;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+
+class MangaByIdComparator implements Comparator<Manga> {
+
+    @Override
+    public int compare(Manga manga1, Manga manga2) {
+        return manga1.getId().compareTo(manga2.getId());
+    }
+}
 
 public class MangaSortMain01 {
 
@@ -19,9 +28,20 @@ public class MangaSortMain01 {
         );
 
         mangas.forEach(System.out::println);
+        System.out.println();
 
         Collections.sort(mangas);
-
         mangas.forEach(System.out::println);
+        System.out.println();
+
+        Collections.sort(mangas, new MangaByIdComparator());
+        mangas.forEach(System.out::println);
+        System.out.println();
+
+        Collections.sort(mangas, new MangaByIdComparator());
+        mangas
+                .stream()
+                .sorted((a, b) -> a.getNome().compareTo(b.getNome()))
+                .forEach(System.out::println);
     }
 }
