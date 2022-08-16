@@ -2,7 +2,7 @@ package com.youtube.maratonajava.Ycolecoes.dominio;
 
 import java.util.Objects;
 
-public class Manga {
+public class Manga implements Comparable<Manga> {
 
     private Long id;
     private String nome;
@@ -59,4 +59,40 @@ public class Manga {
     public void setPreco(double preco) {
         this.preco = preco;
     }
+
+    @Override
+    public int compareTo(Manga outroManga) {
+        /*if(this.id < outroManga.getId()) {
+            return -1;
+        } else if(this.id.equals(outroManga.getId())) {
+            return 0;
+        } else {
+            return 1;
+        }*/
+        // return this.id.compareTo(outroManga.getId());
+
+        // return Double.valueOf(this.preco).compareTo(outroManga.getPreco());
+        // ou return Double.compare(preco, outroManga.getPreco());
+
+        return this.nome.compareTo(outroManga.getNome());
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
