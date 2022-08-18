@@ -19,7 +19,7 @@ public class MapMain01 {
 
         System.out.println("---------------------");
 
-        for(? value: map.values()) {
+        for(String value: map.values()) {
             System.out.println(value);
         }
 
