@@ -3,10 +3,7 @@ package com.youtube.maratonajava.Ycolecoes.set;
 import com.youtube.maratonajava.Ycolecoes.dominio.Manga;
 import com.youtube.maratonajava.Ycolecoes.dominio.Smartphone;
 
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.NavigableSet;
-import java.util.TreeSet;
+import java.util.*;
 
 class SmartphoneMarcaComparator implements Comparator<Smartphone> {
 
@@ -34,5 +31,23 @@ public class NavigableSetMain01 {
         mangas.add(new Manga(3L, "Atack on titan", 11.20, 2));
         mangas.add(new Manga(2L, "Dragon ball Z", 2.99, 0));
         mangas.add(new Manga(2L, "Dragon ball Z", 2.99, 0));
+
+        Manga yuyu = new Manga(21L, "Yuyu Hakusho", 3.2, 5);
+
+        // Metodos de Comparação
+        // lower <
+        // floor <=
+        // higher >
+        // ceiling >=
+        System.out.println();
+        System.out.println(mangas.lower(yuyu));
+        System.out.println(mangas.floor(yuyu));
+        System.out.println(mangas.higher(yuyu));
+        System.out.println(mangas.ceiling(yuyu));
+
+        System.out.println(mangas.size());
+        System.out.println(mangas.pollFirst());
+        System.out.println(mangas.pollLast());
+        System.out.println(mangas.size());
     }
 }
