@@ -11,11 +11,19 @@ public class WildcardMain02 {
         List<Cachorro> cachorros = List.of(new Cachorro(), new Cachorro());
         List<Gato> gatos = List.of(new Gato(), new Gato());
         printConsulta(cachorros);
+        printConsulta(gatos);
+        List<Animal> animals = new ArrayList<>();
+        printConsultaAnimal(animals);
     }
 
-    private static void printConsulta(List<Animal> animals) {
+    private static void printConsulta(List<? extends Animal> animals) {
         for(Animal a: animals) {
             a.consulta();
         }
+    }
+
+    private static void printConsultaAnimal(List<? super Animal> animals) {
+        animals.add(new Cachorro());
+        animals.add(new Gato());
     }
 }
