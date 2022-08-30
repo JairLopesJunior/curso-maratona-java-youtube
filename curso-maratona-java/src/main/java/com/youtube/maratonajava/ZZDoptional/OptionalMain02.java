@@ -23,5 +23,13 @@ public class OptionalMain02 {
 //        Manga newManga = MangaRepository.findByTitle("Drifters")
 //                .orElseGet(() -> new Manga(3, "Drifters", 20));
         System.out.println(newManga);
+
+        String aaaa = null;
+        String resul = Optional.ofNullable(aaaa).orElseGet(() -> a());
+        System.out.println(resul);
+    }
+
+    private static String a() {
+        return "xx";
     }
 }
