@@ -5,10 +5,11 @@ import com.youtube.maratonajava.ZZEstreams.dominio.LightNovel;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 // 1. Order Lighnovel by title
 // 2. Retrieve the firdt 3 titles light novels with price less than 4
-public class StreamMain01 {
+public class StreamMain02 {
 
     private static List<LightNovel> lightNovels = new ArrayList<>(List.of(
             new LightNovel("Tensei Shittara", 8.99),
@@ -24,19 +25,12 @@ public class StreamMain01 {
 
     public static void main(String[] args) {
 
-        lightNovels.sort(Comparator.comparing(LightNovel::getTitle));
-        List<String> titles = new ArrayList<>();
-
-        for(LightNovel lightNovel: lightNovels) {
-            if(lightNovel.getPrice() <= 4) {
-                titles.add(lightNovel.getTitle());
-            }
-            if(titles.size() >= 3) {
-                break;
-            }
-        }
-
-        System.out.println(lightNovels);
+        List<String> titles = lightNovels.stream()
+                .sorted(Comparator.comparing(LightNovel::getTitle))
+                .filter(ln -> ln.getPrice() <= 4)
+                .limit(3)
+                .map(LightNovel::getTitle)
+                .collect(Collectors.toList());
         System.out.println(titles);
     }
 }
