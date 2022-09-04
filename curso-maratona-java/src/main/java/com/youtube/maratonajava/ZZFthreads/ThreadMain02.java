@@ -13,7 +13,7 @@ class ThreadExampleRunnable2 implements Runnable {
     public void run() {
         System.out.println(Thread.currentThread().getName());
         for (int i = 0; i < 10; i++) {
-            System.out.print(c);
+            System.out.print(this.c);
             if(i % 3 == 0) {
                 System.out.println();
             }
