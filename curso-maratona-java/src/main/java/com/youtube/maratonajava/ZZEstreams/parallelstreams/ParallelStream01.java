@@ -60,5 +60,6 @@ public class ParallelStream01 {
         long result = LongStream.rangeClosed(1L, num).parallel().reduce(0L, Long::sum);
         long end = System.currentTimeMillis();
         System.out.println(result + " " + (end - init) + "ms");
+
     }
 }
