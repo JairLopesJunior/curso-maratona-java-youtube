@@ -8,6 +8,8 @@ public class Manga {
     private String title;
     private int chapters;
 
+    public Manga() {}
+
     public Manga(Integer id, String title, int chapters) {
         this.id = id;
         this.title = title;

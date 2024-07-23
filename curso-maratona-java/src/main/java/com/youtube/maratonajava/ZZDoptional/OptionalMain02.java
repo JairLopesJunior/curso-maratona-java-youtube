@@ -9,7 +9,7 @@ public class OptionalMain02 {
 
     public static void main(String[] args) {
 
-        Optional<Manga> mangaByTitle = MangaRepository.findByTitle("Boku no Hero");
+        /*Optional<Manga> mangaByTitle = MangaRepository.findByTitle("Boku no Hero");
         mangaByTitle.ifPresent(m -> m.setTitle("Boku no Hero 2"));
         System.out.println(mangaByTitle);
 
@@ -26,7 +26,12 @@ public class OptionalMain02 {
 
         String aaaa = null;
         String resul = Optional.ofNullable(aaaa).orElseGet(() -> a());
-        System.out.println(resul);
+        System.out.println(resul);*/
+
+        Manga m = new Manga();
+        System.out.println(m.getTitle());
+        String s = Optional.ofNullable(m.getTitle()).orElseGet(String::new);
+        System.out.println(s);
     }
 
     private static String a() {

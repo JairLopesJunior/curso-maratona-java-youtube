@@ -32,6 +32,7 @@ public class AtomicIntegerMain01 {
                 counter.increment();
             }
         };
+        long inicio = System.currentTimeMillis();
         Thread t1 = new Thread(r);
         Thread t2 = new Thread(r);
         t1.start();
@@ -39,6 +40,8 @@ public class AtomicIntegerMain01 {
 
         t1.join();
         t2.join();
+        long fim = System.currentTimeMillis();
+        System.out.println("Tempo gasto para as duas Threads " + (fim - inicio) + "ms");
 
         System.out.println(counter.getCount());
         System.out.println(counter.getAtomicInteger());
